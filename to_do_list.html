@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📝To-Do-List</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: 500;
+            margin: 5px 0;
+        }
+
+        .table {
+            width: 650px;
+            background-color: antiquewhite;
+            height: auto;
+            margin: auto;
+            padding: 15px 0;
+            border-radius: 6px;
+        }
+
+        .table table {
+            margin: auto;
+        }
+
+        th {
+            padding: 10px;
+        }
+
+        input {
+            outline: none;
+            border: 0;
+            padding: 10px 8px;
+            width: 350px;
+        }
+
+        .js-table {
+            margin: 15px auto;
+            width: 650px;
+            border: 5px solid antiquewhite;
+            border-radius: 6px;
+        }
+
+        .js-table tr td {
+            border: 2px solid antiquewhite;
+            padding: 5px;
+        }
+
+        .js-table th {
+            background-color: #a4a6b7;
+        }
+
+        .js-table tr td:nth-child(4),
+        .js-table tr td:last-child {
+            border: none;
+        }
+
+        .js-table tr td:nth-child(4) a,
+        .js-table tr td:last-child a {
+            color: red;
+            background-color: antiquewhite;
+            width: auto;
+            display: block;
+            padding: 8px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bolder;
+            margin: 2px;
+        }
+
+        .js-table tr td:last-child a {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>📝 ToDo List 📝</h1>
+
+    <div class="table">
+        <table border="1">
+            <input type="hidden" id="editno">
+            <thead>
+                <tr>
+                    <h3>
+                        <th>Task</th>
+                    </h3>
+                    <td><input type="text" id="task" placeholder="Add Task"></td>
+                </tr>
+                <tr>
+                    <h3>
+                        <th>Status</th>
+                    </h3>
+                    <td><input type="text" id="status" placeholder="Enter Task Status"></td>
+                </tr>
+                <tr>
+                    <h3>
+                        <th>DedDate</th>
+                    </h3>
+                    <td><input type="date" id="date"></td>
+                </tr>
+                <tr>
+                    <h3>
+                        <th>DedTime</th>
+                    </h3>
+                    <td><input type="time" id="time"></td>
+                </tr>
+                <tr>
+                    <h3>
+                        <th>Action</th>
+                    </h3>
+                    <td><input style="font-weight: bolder;" type="submit" value="Add Task" onclick="adddata()"
+                            id="submit"></td>
+                </tr>
+        </table>
+    </div>
+    <div id="res"></div>
+
+    <script src="js/to_do.js" type="text/javascript"></script>
+</body>
+
+</html>
